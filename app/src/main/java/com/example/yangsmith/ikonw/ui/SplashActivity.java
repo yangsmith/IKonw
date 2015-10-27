@@ -2,11 +2,14 @@ package com.example.yangsmith.ikonw.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yangsmith.ikonw.R;
 import com.example.yangsmith.ikonw.ui.base.BaseActivity;
+
+import com.example.yangsmith.ikonw.view.SplashView;
 import com.example.yangsmith.library.base.BaseAppCompatActivity;
 import com.example.yangsmith.library.eventbus.EventCenter;
 import com.example.yangsmith.library.netstatus.NetUtils;
@@ -16,7 +19,7 @@ import butterknife.InjectView;
 /**
  * Created by Administrator on 2015/10/26.
  */
-public class SplashActivity  extends BaseActivity{
+public class SplashActivity  extends BaseActivity  implements SplashView {
 
 
     @InjectView(R.id.splash_image)
@@ -87,5 +90,25 @@ public class SplashActivity  extends BaseActivity{
     @Override
     protected TransitionMode getOverridePendingTransitionMode() {
         return null;
+    }
+
+    @Override
+    public void animateBackgroundImage(Animation animation) {
+
+    }
+
+    @Override
+    public void initializeViews(String versionName, String copyright, int backgroundResId) {
+
+    }
+
+    @Override
+    public void initializeUmengConfig() {
+
+    }
+
+    @Override
+    public void navigateToHomePage() {
+
     }
 }
